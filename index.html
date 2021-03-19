@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Validador Formulario</title>
 </head>
 <body>
     <div class="screen">
-        <div class="leftside"></div>
-        <div class="rightside"></div>
+        <div class="leftside">
+            <img src="img/img_01.png" alt="imagemLogo">
+        </div>
+        <div class="rightside">
+            <h1>Crie uma Conta</h1>
+            <form method="POST">
+                <label for="nome">
+                    Seu nome: <br>
+                    <input type="text" name="nome">
+                </label>
+                <label for="email">
+                    Seu e-mail: <br>
+                    <input type="text" name="email">
+                </label>
+                <label for="senha">
+                    Sua senha: <br>
+                    <input type="password" name="senha">
+                </label>
+                <label for="">
+                    <input type="submit" value="Cadastrar">
+                </label>
+            </form>
+            <div>
+                Já tem uma conta? <a href="">Faça o Login</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
