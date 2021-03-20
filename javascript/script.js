@@ -14,10 +14,10 @@ let validador = {
             let checar = validador.checarInput(input);
             if(checar !== true){
                 send = false
-                console.log(checar)
+                validador.showError(input, checar);
             }
         }
-        send = false
+
         if(send){
             form.submit();
         }
@@ -55,7 +55,15 @@ let validador = {
     },
 
     limpar:() =>{
+        let inputs = form.querySelectorAll('input');
+        for(let i=0; i<inputs.length; i++){
+            inputs[i].style = '';
+        }
 
+        let ElementosErros = document.querySelectorAll('.error');
+        for(let i=0; i<ElementosErros.length;i++){
+            ElementosErros[i].remove();
+        }
     }
 }
 
