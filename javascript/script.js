@@ -1,20 +1,23 @@
 
 let validador = {
-    handleSubmit:(Event)=>{
-        Event.preventDefault();
+    handleSubmit:(event)=>{
+        event.preventDefault();
 
         let send = true;
 
-        let imput = document.querySelectorAll('input');
+        let imput = form.querySelectorAll('input');
+
+        validador.limpar();
 
         for(let i=0; i<imput.length; i++){
             let input = imput[i];
             let checar = validador.checarInput(input);
             if(checar !== true){
                 send = false
+                console.log(checar)
             }
         }
-        send = false;
+        send = false
         if(send){
             form.submit();
         }
@@ -27,18 +30,32 @@ let validador = {
             for(let k in rules){
                 let rDetails = rules[k].split('=');
                 switch(rDetails[0]){
-                    case 'rerquired':
+                    case 'required':
                         if(input.value == ''){
                             return 'Campo não pode ser vazio';
                         }
                     break;
                     case 'min':
-                        
+
                 }
             }
         }
 
         return true;
+    },
+
+    showError:(input, error) =>{
+        input.style.borderColor = '#ff0000';
+
+        let errorElement = document.createElement('div');
+        errorElement.classList.add('error');
+        errorElement.innerHTML = error;
+
+        input.parentElement.insertBefore(errorElement, input.ElementSibling);
+    },
+
+    limpar:() =>{
+
     }
 }
 
