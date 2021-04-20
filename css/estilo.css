@@ -20,12 +20,18 @@
 .leftside img{
     max-width: 500px;
     height: auto;
+    border-radius: 20px;
 }
 
 .rightside{
     width: 400px;
     background-color: #ddd;
     padding: 50px;
+}
+
+.rightside h1{
+    text-align: right;
+    margin-bottom: 12px;
 }
 
 .rightside label{
@@ -48,4 +54,20 @@
     color: #fff;
     padding: 4px;
     border-radius: 5px;
+}
+
+#cadastrar{
+    background-color: #00a5e2;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+
+#linklogin{
+    text-align: right;
+}
+
+#linklogin a{
+    color: #000088;
+    text-decoration: none;
 }
